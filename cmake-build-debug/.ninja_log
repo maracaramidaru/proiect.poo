@@ -1,0 +1,7 @@
+# ninja log v6
+71	2868	7652241920961887	CMakeFiles/POO.dir/main.cpp.obj	f7a0f72db40c0001
+2112	2458	7660246908245248	POO.exe	592efb909e83c761
+36	820	7697065567917508	build.ninja	ad9e81e762f7b552
+74	2111	7660246887874228	CMakeFiles/POO.dir/POO.cpp.obj	d2767bba078b68aa
+32	536	7658317004046817	CMakeFiles/POO.dir/sd.cpp.obj	e2cc251a9eadaa2d
+38	523	7658317004100036	CMakeFiles/POO.dir/overloading_remove.cpp.obj	381a258c5aad29fd
