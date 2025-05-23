@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.26)
 
 # NOTE: update executable name in .github/workflows/cmake.yml:25 when changing executable name in this file
 # for now, the project name is used as the executable name
-set(MAIN_PROJECT_NAME "oop")
+set(MAIN_PROJECT_NAME "pooproiect2")
 set(MAIN_EXECUTABLE_NAME "${MAIN_PROJECT_NAME}")
 
 
@@ -130,7 +130,32 @@ FetchContent_MakeAvailable(googletest)
 ###############################################################################
 
 # NOTE: update executable name in .github/workflows/cmake.yml:25 when changing name here
-add_executable(${MAIN_EXECUTABLE_NAME} main.cpp ${SOURCES})
+add_executable(${MAIN_EXECUTABLE_NAME} main.cpp ${SOURCES}
+    include/AgentieVacante.h
+    include/AutentificareManager.h
+    include/Autobuz.h
+    include/Avion.h
+    include/Bilet.h
+    include/Cazare.h
+    include/CityBreakMunte.h
+    include/CityBreakPlaja.h
+    include/Croaziera.h
+    include/Enumerari.h
+    include/Exceptii.h
+    include/GestiuneCazari.h
+    include/Hotel.h
+    include/Meniu.h
+    include/Organizator.h
+    include/PachetFactory.h
+    include/Statistici.h
+    include/Transport.h
+    include/TransportManager.h
+    include/Utilizator.h
+    include/Vacanta.h
+    include/ValidatorData.h
+    include/Vapor.h
+    include/Vila.h
+    include/Vizitator.h)
 
 # NOTE: Add all defined targets (e.g. executables, libraries, etc. )
 # NOTE: RUN_SANITIZERS is optional, if it's not present it will default to true
