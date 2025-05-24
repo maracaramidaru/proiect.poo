@@ -10,7 +10,8 @@ Vacanta::Vacanta(std::string destinatie, std::string dataIncepere, int durataZil
       oras(oras),
       cazare(nullptr) {
 }
-Vacanta::Vacanta(double p) : pret(p), durataZile(0) {}
+Vacanta::Vacanta(double p) : durataZile(0), pret(p) {}
+
 
 Vacanta::~Vacanta() {}
 
