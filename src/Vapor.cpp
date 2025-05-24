@@ -2,8 +2,8 @@
 #include <iostream>
 #include <string>
 Vapor::Vapor() : Transport(20), nume("Necunoscut"), capacitate(500) {}
-
-Vapor::Vapor(const std::string& n, int cap, double pretC) : Transport(30), nume(n), capacitate(cap), pretCursa(pretC) {}
+Vapor::Vapor(const std::string& n, int cap, double pretC)
+    : Transport(cap), nume(n), capacitate(cap), pretCursa(pretC) {}
 
 double Vapor::getPretCursa() const {
     return pretCursa;

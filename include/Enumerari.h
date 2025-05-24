@@ -8,11 +8,6 @@ enum class TipVacanta {
     Croaziera
 };
 
-enum class TipUtilizator {
-    Vizitator,
-    Organizator
-};
-
 enum class TipTransport {
     Avion,
     Autobuz,

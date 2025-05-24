@@ -1,6 +1,6 @@
 #include "Autobuz.h"
 
-Autobuz::Autobuz(int nrLocuri, const std::string& n, double pretC) : Transport(25), nume(n), pretCursa(pretC) {}
+Autobuz::Autobuz(int nrLocuri, const std::string& n, double pretC) : Transport(nrLocuri), nume(n), pretCursa(pretC) {}
 
 double Autobuz::getPretCursa() const {
     return pretCursa;

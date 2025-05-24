@@ -27,7 +27,6 @@ void AutentificareManager::login() {
         std::cout << "Utilizator inexistent. Creeaza un utilizator nou.\n";
         std::shared_ptr<Utilizator> utilizatorNou;
 
-        TipUtilizator tipUtilizator;
         bool rolValid = false;
 
         while (!rolValid) {
@@ -37,12 +36,10 @@ void AutentificareManager::login() {
             if (std::cin >> alegereRol) {
                 switch (alegereRol) {
                     case 1:
-                        tipUtilizator = TipUtilizator::Vizitator;
                         utilizatorNou = std::make_shared<Vizitator>("", "");
                         rolValid = true;
                         break;
                     case 2:
-                        tipUtilizator = TipUtilizator::Organizator;
                         utilizatorNou = std::make_shared<Organizator>("", "");
                         rolValid = true;
                         break;
