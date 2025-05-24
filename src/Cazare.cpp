@@ -30,9 +30,9 @@ const std::string& Cazare::getNume() const {
     return nume;
 }
 
-const std::string& Cazare::getLocatie() const {
-    return locatie;
-}
+// const std::string& Cazare::getLocatie() const {
+//     return locatie;
+// }
 
 double Cazare::getPretPerNoapte() const {
     return pretPerNoapte;
