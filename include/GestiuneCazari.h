@@ -21,8 +21,7 @@ public:
         int nrPersoane,
         double bugetMaxim
     );
-
-    static void GestiuneCazari::afiseazaCazariPentruDestinatie(const std::string& destinatie, const std::vector<std::shared_ptr<Cazare>>& cazari) ;
+    void afiseazaCazariPentruDestinatie(const std::string& destinatie, const std::vector<std::shared_ptr<Cazare>>& cazari) ;
 
 };
 
