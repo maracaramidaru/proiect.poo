@@ -35,7 +35,7 @@ void AgentieVacante::citestePachet() {
     }
 }
 
-void AgentieVacante::cautaDupaOras(std::string orasCautat) const {
+void AgentieVacante::cautaDupaOras(const std::string& orasCautat) const {
     std::cout << "\nCautare dupa oras: " << orasCautat << "\n";
     bool gasit = false;
     for (const auto& pachet : pachete) {

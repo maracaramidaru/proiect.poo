@@ -15,7 +15,7 @@ void AutentificareManager::login() {
 
     // Cauta utilizatorul cu username-ul dat
     std::shared_ptr<Utilizator> gasit = nullptr;
-    for (auto& u : utilizatori) {
+    for (const auto& u : utilizatori) {
         if (u->getUsername() == userInput) {
             gasit = u;
             break;
