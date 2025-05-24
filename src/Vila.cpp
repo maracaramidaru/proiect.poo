@@ -4,7 +4,8 @@
 Vila::Vila(const std::string& nume, const std::string& locatie,
            double pretPerNoapte, int camereDisponibile, int capacitateMaxima)
     : Cazare(nume, TipCazare::vila, 0, locatie, pretPerNoapte, camereDisponibile),
-      areBucatarie(true), areGradina(true), areBarbeque(false),
+      //areBucatarie(true), areGradina(true),
+      areBarbeque(false),
       capacitateMaxima(capacitateMaxima) {}
 
 void Vila::setBarbeque(bool are) {

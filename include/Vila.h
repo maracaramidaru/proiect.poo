@@ -8,8 +8,8 @@
 
 class Vila : public Cazare {
 private:
-    bool areBucatarie;
-    bool areGradina;
+    //bool areBucatarie;
+    //bool areGradina;
     bool areBarbeque;
     int capacitateMaxima;
 
