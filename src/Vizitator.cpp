@@ -15,5 +15,7 @@ void Vizitator::afiseazaMeniu() const {
     std::cout << "7. Afiseaza biletele mele\n";
     std::cout << "8. Afiseaza cele mai ieftine pachete de vacanta\n";
     std::cout << "9. Anuleaza loc\n";
+    std::cout << "10.Iesire\n";
     std::cout << "0. Delogare\n";
+
 }

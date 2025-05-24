@@ -297,6 +297,10 @@ void Meniu::executa(AgentieVacante& agentie) {
             std::cin.ignore();
 
             if (rol == "vizitator") {
+                if (optiune == 10) {
+                    std::cout << "La revedere!\n";
+                    return;
+                }
                 switch (optiune) {
                     case 1: agentie.listeazaPachete();
                     break;
@@ -318,13 +322,19 @@ void Meniu::executa(AgentieVacante& agentie) {
                     break;
                     case 0: manager.logout();
                     break;
-                    default: std::cout << "Optiune invalida.\n";
+                    default:
+                        std::cout << "Optiune invalida.\n";
                 }
             } else if (rol == "organizator") {
+                if (optiune == 3) {
+                    std::cout << "La revedere!\n";
+                    return;
+                }
                 switch (optiune) {
                     case 1: adaugaPachet(agentie); break;
                     case 2: agentie.listeazaPachete(); break;
-                    case 0: break;
+                    case 0: manager.logout();
+                    break;
                     default: std::cout << "Optiune invalida.\n";
                 }
             }
