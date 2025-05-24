@@ -1,5 +1,6 @@
 #include "Statistici.h"
-
+#include <iostream>
+#include <algorithm>
 Statistici::Statistici() : totalRezervari(0), totalVanzari(0.0) {}
 
 Statistici& Statistici::getInstance() {

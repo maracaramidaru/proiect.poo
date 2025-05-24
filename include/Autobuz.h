@@ -7,6 +7,7 @@
 
 class Autobuz : public Transport {
     double pretCursa;
+    std::string nume;
 public:
     Autobuz(int nrLocuri, const std::string& n, double pretC);
     double getPretCursa() const override;
