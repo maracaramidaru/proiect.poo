@@ -10,7 +10,6 @@ int main() {
     AgentieVacante agentie;
 
     auto hotelAtena = std::make_shared<Hotel>("Hotel Olympic", 4, "Atena", 500.0, 50);
-    auto hotelLux = std::make_shared<Hotel>("Hotel Lux", 5, "Paris", 1000.0, 30);
     hotelAtena->setMicDejun(true);
     hotelAtena->setPiscina(true);
     hotelAtena->adaugaFacilitate("Wi-Fi gratuit");

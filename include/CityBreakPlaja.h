@@ -21,7 +21,7 @@ public:
     bool esteOrasul(std::string orasCautat) const override;
     int getBileteDisponibile() const override;
 
-    bool rezervaBilet();
+    bool rezervaBilet()override;
 
     void print(std::ostream& os) const override;
     friend std::istream& operator>>(std::istream& in, CityBreakPlaja& pachet);

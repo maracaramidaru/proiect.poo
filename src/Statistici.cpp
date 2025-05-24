@@ -1,5 +1,5 @@
 #include "Statistici.h"
-
+#include "Bilet.h"
 Statistici::Statistici() : totalRezervari(0), totalVanzari(0.0) {}
 
 Statistici& Statistici::getInstance() {
@@ -12,11 +12,15 @@ void Statistici::adaugaRezervare(const std::string& destinatie, double pret) {
     totalRezervari++;
     totalVanzari += pret;
 }
-
+void Statistici::afiseazaNrBileteVandute() const {
+    Bilet::afiseazaNrAchizitii();
+}
 void Statistici::afiseazaStatistici() const {
     std::cout << "\n=== Statistici ===\n";
     std::cout << "Total rezervari: " << totalRezervari << "\n";
     std::cout << "Total vanzari: " << totalVanzari << " RON\n";
+
+    afiseazaNrBileteVandute();
     std::cout << "\nRezervari per destinatie:\n";
 
     auto maxRezervari = std::max_element(
