@@ -9,7 +9,7 @@ class Hotel : public Cazare {
 private:
     bool arePiscina;
     bool areSpa;
-    bool areRestaurant;
+    //bool areRestaurant;
 
 public:
     Hotel(const std::string& nume, int stele, const std::string& locatie,

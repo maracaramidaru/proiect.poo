@@ -41,7 +41,6 @@ public:
     const std::vector<std::string>& getFacilitati() const;
 
     const std::string& getNume() const;
-    const std::string& getLocatie() const;
     double getPretPerNoapte() const;
     int getStele() const;
 

@@ -68,8 +68,11 @@ void Utilizator::adaugaBilet(const std::shared_ptr<Vacanta>& bilet) {
     bileteRezervate.push_back(bilet);
 }
 
-void Utilizator::setParola(const std::string& newParola) {
-    parola = newParola;
+// void Utilizator::setParola(const std::string& newParola) {
+//     parola = newParola;
+// }
+void Utilizator::setUsername(const std::string& newUsername) {
+    username = newUsername;
 }
 
 void Utilizator::afiseazaBilete() const {

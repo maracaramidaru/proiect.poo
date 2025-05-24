@@ -3,7 +3,7 @@
 Hotel::Hotel(const std::string& nume, int stele, const std::string& locatie,
              double pretPerNoapte, int camereDisponibile)
     : Cazare(nume, TipCazare::hotel, stele, locatie, pretPerNoapte, camereDisponibile),
-      arePiscina(false), areSpa(false), areRestaurant(true) {}
+      arePiscina(false), areSpa(false) {}
 
 void Hotel::setPiscina(bool are) {
     arePiscina = are;

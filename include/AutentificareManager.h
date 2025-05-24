@@ -11,12 +11,14 @@
 class AutentificareManager {
 private:
     std::shared_ptr<Utilizator> utilizatorCurent;
+    std::vector<std::shared_ptr<Utilizator>> utilizatori;
+
 
 public:
-    AutentificareManager() = default;
+    AutentificareManager() ;
 
     void login();
-
+    void setUsername(std::string username);
     std::shared_ptr<Utilizator> getUtilizatorCurent() const;
 
     bool esteAutentificat() const;

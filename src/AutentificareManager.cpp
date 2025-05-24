@@ -4,29 +4,51 @@
 #include <string>
 #include "Vizitator.h"
 #include "Organizator.h"
+AutentificareManager::AutentificareManager() {
+    utilizatori.push_back(std::make_shared<Vizitator>("mara", "parola123"));
+}
+
 void AutentificareManager::login() {
     std::string userInput;
     std::cout << "Introdu username-ul: ";
     std::getline(std::cin, userInput);
 
-    if (userInput == "mara") {
-        std::string parolaCorecta = "parola123";
-        std::string incercareParola;
-        do {
-            std::cout << "Introdu parola pentru mara: ";
-            std::getline(std::cin, incercareParola);
-            if (incercareParola != parolaCorecta) {
+    // Cauta utilizatorul cu username-ul dat
+    std::shared_ptr<Utilizator> gasit = nullptr;
+    for (auto& u : utilizatori) {
+        if (u->getUsername() == userInput) {
+            gasit = u;
+            break;
+        }
+    }
+
+    if (gasit != nullptr) {
+        std::string parolaInput;
+        bool autentificat = false;
+        int incercari = 0;
+
+        while (!autentificat && incercari < 3) {
+            std::cout << "Introdu parola pentru " << userInput << ": ";
+            std::getline(std::cin, parolaInput);
+
+            if (gasit->autentificare(userInput, parolaInput)) {
+                autentificat = true;
+                utilizatorCurent = gasit;
+                std::cout << "Autentificare reusita! Bine ai venit, " << userInput << ".\n";
+            } else {
                 std::cout << "Parola gresita. Incearca din nou.\n";
+                incercari++;
             }
-        } while (incercareParola != parolaCorecta);
+        }
 
-        utilizatorCurent = std::make_shared<Vizitator>("mara", parolaCorecta);
-
-        std::cout << "Autentificare reusita! Bine ai venit, mara.\n";
+        if (!autentificat) {
+            std::cout << "Prea multe incercari esuate. Iesire.\n";
+            utilizatorCurent = nullptr;
+        }
     } else {
         std::cout << "Utilizator inexistent. Creeaza un utilizator nou.\n";
-        std::shared_ptr<Utilizator> utilizatorNou;
 
+        std::shared_ptr<Utilizator> utilizatorNou;
         bool rolValid = false;
 
         while (!rolValid) {
@@ -55,6 +77,12 @@ void AutentificareManager::login() {
 
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::cin >> *utilizatorNou;
+
+        // Seteaza username-ul corect la noul utilizator
+        utilizatorNou->setUsername(userInput);
+
+        // Adauga utilizatorul in lista pentru a putea fi gasit ulterior
+        utilizatori.push_back(utilizatorNou);
 
         utilizatorCurent = utilizatorNou;
 
