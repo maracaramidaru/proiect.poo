@@ -14,6 +14,7 @@ protected:
     std::vector<int> rezervariActive;
 
 public:
+
     Transport() : numarLocuri(0) {}
     Transport(int nrLocuri);
 
