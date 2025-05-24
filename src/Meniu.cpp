@@ -6,7 +6,9 @@
 #include "TransportManager.h"
 #include <iostream>
 #include <string>
-
+#include "Hotel.h"
+#include "Statistici.h"
+#include "Vila.h"
 Meniu& Meniu::getInstance() {
     static Meniu instance;
     return instance;

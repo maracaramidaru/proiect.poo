@@ -109,9 +109,8 @@ void AgentieVacante::listeazaPachete() {
 
         std::cout << *pachete[i];
     }
-
-    auto manager = AutentificareManager::getInstance();
-    auto utilizatorCurent = manager->getUtilizatorCurent();
+    AutentificareManager manager;
+    auto utilizatorCurent = manager.getUtilizatorCurent();
 
     if (utilizatorCurent && utilizatorCurent->getRol() == "organizator") {
         char optiune;

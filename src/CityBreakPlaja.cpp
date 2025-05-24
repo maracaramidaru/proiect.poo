@@ -2,7 +2,7 @@
 #include "Vacanta.h"
 #include <iostream>
 #include <string>
-
+#include "Bilet.h"
 
 CityBreakPlaja::CityBreakPlaja( std::string destinatie, int durata,  std::string oras,
                                 std::string dataIncepere, double pret, int bilete)
@@ -31,6 +31,16 @@ int CityBreakPlaja::getBileteDisponibile() const {
     return bileteDisponibile;
 }
 
+
+bool CityBreakPlaja::rezervaBilet() override {
+    if (getBileteDisponibile() > 0) {
+        --bileteDisponibile;
+        std::cout << "Bilet rezervat! Bilete ramase: " << bileteDisponibile << "\n";
+        return true;
+    } else {
+        throw BileteEpuizateException();
+    }
+}
 void CityBreakPlaja::print(std::ostream& os) const {
     os << "City Break la Plaja\n";
     os << "Destinatie: " << destinatie << "\n";

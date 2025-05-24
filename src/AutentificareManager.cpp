@@ -2,6 +2,8 @@
 # include "Enumerari.h"
 #include <iostream>
 #include <string>
+#include "Vizitator.h"
+#include "Organizator.h"
 void AutentificareManager::login() {
     std::string userInput;
     std::cout << "Introdu username-ul: ";
