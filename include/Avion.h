@@ -12,7 +12,7 @@
 #include "Vizitator.h"
 
 class Avion : public Transport {
-    std::string nume;
+    //std::string nume;
     int pozitie = 0;
     double pretCursa;
 public:
@@ -20,11 +20,12 @@ public:
     void deplaseaza();
     void afiseaza(int lungime) const;
     int getPozitie() const;
-    std::string getNume() const;
     double getPretCursa() const override;
     double calculeazaReducere(int nrPersoane, bool copil) const override;
     void print(std::ostream& os) const override;
     void ruleazaJocAvioane();
+    const std::string& getNume() const override;
+
 };
 
 #endif //AVION_H

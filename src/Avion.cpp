@@ -17,8 +17,9 @@ int Avion::getPozitie() const {
     return pozitie;
 }
 
-std::string Avion::getNume() const {
-    return nume;
+const std::string& Avion::getNume() const override{
+    // exemplu: returnează numele cu prefix "Avion: "
+    return  nume;
 }
 
 double Avion::getPretCursa() const {

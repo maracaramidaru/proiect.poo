@@ -26,7 +26,8 @@ public:
 
     virtual ~Transport();
 
-    const std::string& getNume() const;
+    virtual const std::string& getNume() const;
+
 
     void rezervaLoc(int loc);
     void anuleazaRezervare(int loc);
