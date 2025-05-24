@@ -24,7 +24,7 @@ public:
     double calculeazaReducere(int nrPersoane, bool copil) const override;
     void print(std::ostream& os) const override;
     void ruleazaJocAvioane();
-    const std::string& getNume() const override;
+    const std::string& getNume() const ;
 
 };
 
