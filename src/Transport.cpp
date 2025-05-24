@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <string>
 
-Transport::Transport(int nrLocuri) : numarLocuri(nrLocuri), locuri(nrLocuri, false) {}
+Transport::Transport(int nrLocuri) : locuri(nrLocuri, false), numarLocuri(nrLocuri) {}
 
 Transport::~Transport() {}
 

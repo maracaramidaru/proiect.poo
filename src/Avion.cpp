@@ -45,14 +45,14 @@ void Avion::ruleazaJocAvioane() {
     std::vector<Avion> avioane;
 
     for (int i = 0; i < nrAvioane; ++i) {
-        std::string nume;
+        std::string numeavion;
         bool numeValid = false;
         while (!numeValid) {
             std::cout << "Numele agentiei de zbor " << i + 1 << ": ";
-            std::cin >> nume;
+            std::cin >> numeavion;
             bool exista = false;
             for (const auto& avion : avioane) {
-                if (avion.getNume() == nume) {
+                if (avion.getNume() == numeavion) {
                     exista = true;
                     break;
                 }
@@ -60,7 +60,7 @@ void Avion::ruleazaJocAvioane() {
             if (exista) {
                 std::cout << "Nume deja utilizat! Te rog alege un alt nume.\n";
             } else {
-                avioane.push_back(Avion(25, nume, 100));
+                avioane.emplace_back(25, nume, 100);
                 numeValid = true;
             }
         }

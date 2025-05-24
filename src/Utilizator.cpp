@@ -3,7 +3,8 @@
 Utilizator::Utilizator() {}
 
 Utilizator::Utilizator(const std::string& u, const std::string& p, const std::string& r)
-    : username(u), parola(p), rol(r) {}
+    : rol(r), username(u), parola(p) {}
+
 
 Utilizator::~Utilizator() {}
 
