@@ -14,7 +14,7 @@ private:
     std::map<std::string, std::vector<std::shared_ptr<Cazare>>> cazariPerDestinatie;
 
 public:
-    void adaugaCazare(const std::string& destinatie, std::shared_ptr<Cazare> cazare);
+    void adaugaCazare(const std::string& destinatie, const std::shared_ptr<Cazare>& cazare);
 
     std::vector<std::shared_ptr<Cazare>> getCazariDisponibile(
         const std::string& destinatie,
@@ -22,7 +22,8 @@ public:
         double bugetMaxim
     );
 
-    void afiseazaCazariPentruDestinatie(const std::string& destinatie) const;
+    static void GestiuneCazari::afiseazaCazariPentruDestinatie(const std::string& destinatie, const std::vector<std::shared_ptr<Cazare>>& cazari) ;
+
 };
 
 #endif // GESTIUNECAZARI_H

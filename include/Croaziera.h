@@ -23,7 +23,7 @@ public:
 
     bool rezervaBilet() override;
 
-    double calculeazaPretCuReducere(double pretInitial, const std::string& codPromo);
+    //double calculeazaPretCuReducere(double pretInitial, const std::string& codPromo);
 
     void print(std::ostream& os) const override;
 

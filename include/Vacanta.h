@@ -40,7 +40,7 @@ public:
     Vacanta& operator=(const Vacanta& other);
 
     void setCazare(std::shared_ptr<Cazare> cazareNoua);
-    std::shared_ptr<Cazare> getCazare() const;
+   // std::shared_ptr<Cazare> getCazare() const;
 };
 
 #endif // VACANTA_H

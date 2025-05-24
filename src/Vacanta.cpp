@@ -78,7 +78,7 @@ void Vacanta::setCazare(std::shared_ptr<Cazare> cazareNoua) {
         pret += cazare->calculeazaPret(durataZile, 1);
     }
 }
-
-std::shared_ptr<Cazare> Vacanta::getCazare() const {
-    return cazare;
-}
+//
+// std::shared_ptr<Cazare> Vacanta::getCazare() const {
+//     return cazare;
+// }

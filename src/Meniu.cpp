@@ -91,19 +91,21 @@ Meniu::Meniu() : utilizator(nullptr),transportCurent(nullptr) {}
 
         auto vacantaSelectata = vacanteFiltrate[alegere - 1];
 
-        std::cout << "\nCazari disponibile pentru " << vacantaSelectata->getDestinatie()
-                  << " in limita bugetului de " << bugetMaxim << " RON:\n";
-        auto cazariDisponibile = agentie.getGestiuneCazari().getCazariDisponibile(
-            vacantaSelectata->getDestinatie(), 1, bugetMaxim);
+    std::cout << "\nCazari disponibile pentru " << vacantaSelectata->getDestinatie()
+       << " in limita bugetului de " << bugetMaxim << " RON:\n";
 
-        if (cazariDisponibile.empty()) {
-            std::cout << "Nu exista cazari disponibile in limita bugetului specificat.\n";
-        } else {
-            for (const auto& cazare : cazariDisponibile) {
-                std::cout << cazare->getNume() << " - " << cazare->getPretPerNoapte()
-                         << " RON/noapte (" << cazare->getStele() << " stele)\n";
-            }
-        }
+    auto cazariDisponibile = agentie.getGestiuneCazari().getCazariDisponibile(
+        vacantaSelectata->getDestinatie(), 1, bugetMaxim
+    );
+
+    if (cazariDisponibile.empty()) {
+        std::cout << "Nu exista cazari disponibile in limita bugetului specificat.\n";
+    } else {
+        agentie.getGestiuneCazari().afiseazaCazariPentruDestinatie(
+            vacantaSelectata->getDestinatie(),
+            cazariDisponibile
+        );
+    }
 
         int nrBilete;
         std::cout << "Cate bilete doresti sa rezervi? ";

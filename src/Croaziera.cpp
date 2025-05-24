@@ -31,15 +31,15 @@ bool Croaziera::rezervaBilet() {
         throw BileteEpuizateException();
     }
 }
-
-double Croaziera::calculeazaPretCuReducere(double pretInitial, const std::string& codPromo) {
-    if (codPromo == "CROAZIERA15")
-        return getPret() * 0.85;
-    else if (codPromo == "CROAZIERA25")
-        return getPret() * 0.75;
-    else
-        return pretInitial;
-}
+//
+// double Croaziera::calculeazaPretCuReducere(double pretInitial, const std::string& codPromo) {
+//     if (codPromo == "CROAZIERA15")
+//         return getPret() * 0.85;
+//     else if (codPromo == "CROAZIERA25")
+//         return getPret() * 0.75;
+//     else
+//         return pretInitial;
+// }
 
 void Croaziera::print(std::ostream& os) const {
     os << "Croaziera:\n";

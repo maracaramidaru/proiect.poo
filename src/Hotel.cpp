@@ -13,9 +13,9 @@ void Hotel::setSpa(bool are) {
     areSpa = are;
 }
 
-void Hotel::setRestaurant(bool are) {
-    areRestaurant = are;
-}
+// void Hotel::setRestaurant(bool are) {
+//     areRestaurant = are;
+// }
 
 double Hotel::calculeazaPret(int nrNopti, int nrPersoane) {
     double pretTotal = Cazare::calculeazaPret(nrNopti, nrPersoane);

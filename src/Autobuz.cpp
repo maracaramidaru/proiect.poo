@@ -15,6 +15,4 @@ double Autobuz::calculeazaReducere(int nrPersoane, bool copil) const {
 
 void Autobuz::print(std::ostream& os) const {
     os << "Autobuz: " << nume << "|Pret cursa:" << pretCursa << "\n";
-}//
-// Created by marac on 5/22/2025.
-//
+}

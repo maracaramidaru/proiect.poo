@@ -17,7 +17,7 @@ public:
 
     void setPiscina(bool are);
     void setSpa(bool are);
-    void setRestaurant(bool are);
+    //void setRestaurant(bool are);
 
     double calculeazaPret(int nrNopti, int nrPersoane) override;
 };

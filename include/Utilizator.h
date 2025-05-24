@@ -43,7 +43,7 @@ public:
 
     void adaugaBilet(const std::shared_ptr<Vacanta>& bilet);
 
-    std::string getParola() const;
+    //std::string getParola() const;
     void setParola(const std::string& newParola);
 
     void afiseazaBilete() const;
