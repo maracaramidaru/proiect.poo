@@ -4,7 +4,7 @@
 Vapor::Vapor() : Transport(20, "Necunoscut"), capacitate(500), pretCursa(0.0) {}
 
 
-Vapor::Vapor(const std::string& n, int cap, double pretC) : Transport(30), nume(n), capacitate(cap), pretCursa(pretC) {}
+Vapor::Vapor(const std::string& n, int cap, double pretC) : Transport(30,n), capacitate(cap), pretCursa(pretC) {}
 
 double Vapor::getPretCursa() const {
     return pretCursa;
