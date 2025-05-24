@@ -2,10 +2,9 @@
 
 #ifndef STATISTICI_H
 #define STATISTICI_H
-#include <iostream>
 #include <map>
 #include <string>
-#include <algorithm>
+
 
 class Statistici {
 private:
@@ -20,7 +19,7 @@ public:
 
     void adaugaRezervare(const std::string& destinatie, double pret);
     void afiseazaStatistici() const;
-    void afiseazaNrBileteVandute() const;
+    //void afiseazaNrBileteVandute() const;
     Statistici(const Statistici&) = delete;
     Statistici& operator=(const Statistici&) = delete;
 };
