@@ -11,8 +11,12 @@ private:
     //static int nrAchizitii;
 
 public:
-    Bilet(std::string destinatie, std::string dataIncepere, int durataZile,
-          double pret, std::string oras);
+    Bilet(const std::string& destinatie,
+       const std::string& dataIncepere,
+       int durataZile,
+       double pret,
+       const std::string& oras);
+
 
 
     //static void afiseazaNrAchizitii();

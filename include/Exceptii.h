@@ -13,7 +13,7 @@ class DataInvalidaException : public std::exception {
 private:
     std::string mesaj;
 public:
-    DataInvalidaException(const std::string& msg);
+    explicit DataInvalidaException(const std::string& msg);
     const char* what() const noexcept override;
 };
 
@@ -21,7 +21,7 @@ class RezervareInvalidaException : public std::exception {
 private:
     std::string mesaj;
 public:
-    RezervareInvalidaException(const std::string& msg);
+    explicit RezervareInvalidaException(const std::string& msg);
     const char* what() const noexcept override;
 };
 

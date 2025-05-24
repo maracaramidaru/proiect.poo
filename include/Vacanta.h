@@ -30,7 +30,7 @@ public:
 
     double getPret() const;
     int getDurataZile() const;
-    std::string getDestinatie() const;
+    const std::string& getDestinatie() const;
 
     bool operator<(const Vacanta& other) const;
 

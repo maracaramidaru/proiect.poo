@@ -4,6 +4,8 @@
 #include <string>
 
 Transport::Transport(int nrLocuri) : locuri(nrLocuri, false), numarLocuri(nrLocuri) {}
+Transport::Transport(int nrLocuri, const std::string& nume)
+    : numarLocuri(nrLocuri), nume(nume) {}
 
 Transport::~Transport() {}
 

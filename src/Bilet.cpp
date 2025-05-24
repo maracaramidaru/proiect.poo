@@ -1,9 +1,12 @@
 #include "Bilet.h"
 
 //int Bilet::nrAchizitii = 0;
+Bilet::Bilet(const std::string& destinatie,
+             const std::string& dataIncepere,
+             int durataZile,
+             double pret,
+             const std::string& oras)
 
-Bilet::Bilet(std::string destinatie, std::string dataIncepere, int durataZile,
-             double pret, std::string oras)
     : Vacanta(destinatie, dataIncepere, durataZile, pret, oras) {
     //++nrAchizitii;
     std::cout << "Bilet cumparat pentru: " << destinatie << ", oras: " << oras << "\n";

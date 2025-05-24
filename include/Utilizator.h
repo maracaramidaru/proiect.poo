@@ -36,8 +36,8 @@ public:
 
     friend std::istream& operator>>(std::istream& in, Utilizator& utilizator);
 
-    std::string getRol() const;
-    std::string getUsername() const;
+    const std::string& getRol() const;
+    const std::string& getUsername() const;
 
     bool autentificare(const std::string& user, const std::string& pass) const;
 

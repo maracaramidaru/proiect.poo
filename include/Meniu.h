@@ -27,7 +27,7 @@ private:
     std::map<std::string, std::shared_ptr<Transport>> transporturiRezervate;
 
     void adaugaPachet(AgentieVacante& agentie);
-    void cautaPachete(AgentieVacante& agentie);
+    void cautaPachete(const AgentieVacante& agentie);
     void selecteazaTransport(int nrBilete, const std::string& tipVacanta);
     void rezervaVacanta(AgentieVacante& agentie);
     void anuleazaLoc();

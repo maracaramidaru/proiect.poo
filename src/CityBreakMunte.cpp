@@ -3,8 +3,11 @@
 #include <string>
 #include "Vacanta.h"
 #include <limits>
-CityBreakMunte::CityBreakMunte(std::string tara, int durata, std::string oras,
-                               std::string dataIncepere, double pret, int bilete)
+CityBreakMunte::CityBreakMunte(const std::string& tara, int durata,
+                               const std::string& oras,
+                               const std::string& dataIncepere,
+                               double pret, int bilete)
+
     : Vacanta(tara, dataIncepere, durata, pret, oras),
       bileteDisponibile(bilete) {}
 

@@ -12,8 +12,11 @@ private:
     int bileteDisponibile;
 
 public:
-    CityBreakMunte(std::string tara, int durata, std::string oras,
-                   std::string dataIncepere, double pret, int bilete);
+    CityBreakMunte(const std::string& tara, int durata,
+               const std::string& oras,
+               const std::string& dataIncepere,
+               double pret, int bilete);
+
     CityBreakMunte();
 
     CityBreakMunte(const CityBreakMunte& other);

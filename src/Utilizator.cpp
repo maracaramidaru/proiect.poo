@@ -52,11 +52,11 @@ std::istream& operator>>(std::istream& in, Utilizator& utilizator) {
     return in;
 }
 
-std::string Utilizator::getRol() const {
+const std::string& Utilizator::getRol() const {
     return rol;
 }
 
-std::string Utilizator::getUsername() const {
+const std::string& Utilizator::getUsername() const {
     return username;
 }
 

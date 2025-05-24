@@ -2,8 +2,9 @@
 #include <iostream>
 #include <string>
 #include "Vacanta.h"
-Croaziera::Croaziera(std::string destinatie, int durata, std::string oras,
-                     std::string dataPlecare, double pret, int bilete)
+Croaziera::Croaziera(const std::string& destinatie, int durata, const std::string& oras,
+                     const std::string& dataPlecare, double pret, int bilete)
+
     : Vacanta(destinatie, dataPlecare, durata, pret, oras),
       bileteDisponibile(bilete) {}
 

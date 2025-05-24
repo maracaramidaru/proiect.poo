@@ -1,6 +1,8 @@
 #include "Avion.h"
 
-Avion::Avion(const int nrLocuri, const std::string& n, double pretC) : Transport(nrLocuri), nume(n), pretCursa(pretC) {}
+Avion::Avion(int nrLocuri, const std::string& n, double pretC)
+    : Transport(nrLocuri, n), pretCursa(pretC) {}
+
 
 void Avion::deplaseaza() {
     pozitie += rand() % 3 + 1;

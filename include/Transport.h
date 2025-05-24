@@ -17,7 +17,7 @@ public:
 
     Transport() : numarLocuri(0) {}
     Transport(int nrLocuri);
-
+    Transport(int nrLocuri, const std::string& nume);
     virtual void print(std::ostream& os) const = 0;
     virtual double getPretCursa() const = 0;
     virtual double calculeazaReducere(int nrPersoane, bool copil) const = 0;

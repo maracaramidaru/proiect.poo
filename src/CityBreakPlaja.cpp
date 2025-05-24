@@ -4,9 +4,11 @@
 #include <string>
 #include "Bilet.h"
 #include "Exceptii.h"
+CityBreakPlaja::CityBreakPlaja(const std::string& destinatie, int durata,
+                               const std::string& oras,
+                               const std::string& dataIncepere,
+                               double pret, int bilete)
 
-CityBreakPlaja::CityBreakPlaja( std::string destinatie, int durata,  std::string oras,
-                                std::string dataIncepere, double pret, int bilete)
     : Vacanta(destinatie, dataIncepere, durata, pret, oras), bileteDisponibile(bilete) {}
 
 

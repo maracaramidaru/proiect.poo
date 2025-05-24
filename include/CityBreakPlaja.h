@@ -10,8 +10,11 @@ private:
 
 public:
 
-    CityBreakPlaja( std::string tara, int durata, std::string oras,
-                    std::string dataIncepere, double pret, int bilete);
+    CityBreakPlaja(const std::string& destinatie, int durata,
+               const std::string& oras,
+               const std::string& dataIncepere,
+               double pret, int bilete);
+
 
 
     CityBreakPlaja();
