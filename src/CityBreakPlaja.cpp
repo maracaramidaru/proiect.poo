@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include "Bilet.h"
+#include "Exceptii.h"
 
 CityBreakPlaja::CityBreakPlaja( std::string destinatie, int durata,  std::string oras,
                                 std::string dataIncepere, double pret, int bilete)
@@ -32,7 +33,7 @@ int CityBreakPlaja::getBileteDisponibile() const {
 }
 
 
-bool CityBreakPlaja::rezervaBilet() override {
+bool CityBreakPlaja::rezervaBilet() {
     if (getBileteDisponibile() > 0) {
         --bileteDisponibile;
         std::cout << "Bilet rezervat! Bilete ramase: " << bileteDisponibile << "\n";
@@ -52,4 +53,48 @@ void CityBreakPlaja::print(std::ostream& os) const {
         os << "Cazare: " << cazare->getNume()
            << " (" << cazare->getStele() << " stele)\n";
     }
+}
+
+std::istream& operator>>(std::istream& in, CityBreakPlaja& pachet) {
+    std::cout << "Introdu destinatia: ";
+    in.ignore();
+    if (!std::getline(in, pachet.destinatie)) {
+        in.clear();
+        return in;
+    }
+
+    std::cout << "Introdu durata (zile): ";
+    if (!(in >> pachet.durataZile)) {
+        in.clear();
+        return in;
+    }
+    in.ignore();
+
+    std::cout << "Introdu orasul: ";
+    if (!std::getline(in, pachet.oras)) {
+        in.clear();
+        return in;
+    }
+
+    std::cout << "Introdu data de incepere: ";
+    if (!std::getline(in, pachet.dataIncepere)) {
+        in.clear();
+        return in;
+    }
+
+    std::cout << "Introdu pretul: ";
+    if (!(in >> pachet.pret)) {
+        in.clear();
+        return in;
+    }
+    in.ignore();
+
+    std::cout << "Introdu numarul de bilete disponibile: ";
+    if (!(in >> pachet.bileteDisponibile)) {
+        in.clear();
+        return in;
+    }
+    in.ignore();
+
+    return in;
 }

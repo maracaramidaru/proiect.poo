@@ -130,7 +130,7 @@ FetchContent_MakeAvailable(googletest)
 ###############################################################################
 
 # NOTE: update executable name in .github/workflows/cmake.yml:25 when changing name here
-add_executable(${MAIN_EXECUTABLE_NAME} main.cpp ${SOURCES}
+add_executable(${MAIN_EXECUTABLE_NAME} src/main.cpp ${SOURCES}
     include/AgentieVacante.h
     include/AutentificareManager.h
     include/Autobuz.h

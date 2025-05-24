@@ -24,6 +24,7 @@ public:
     bool rezervaBilet();
 
     void print(std::ostream& os) const override;
+    friend std::istream& operator>>(std::istream& in, CityBreakPlaja& pachet);
 };
 
 #endif //CITYBREAKPLAJA_H

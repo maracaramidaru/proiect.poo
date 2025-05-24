@@ -14,7 +14,7 @@ Meniu& Meniu::getInstance() {
     return instance;
 }
 
-Meniu::Meniu() : transportCurent(nullptr), utilizator(nullptr) {}
+Meniu::Meniu() : utilizator(nullptr),transportCurent(nullptr) {}
 
  void Meniu::rezervaVacanta(AgentieVacante& agentie) {
         int categorie;
@@ -270,7 +270,6 @@ Meniu::Meniu() : transportCurent(nullptr), utilizator(nullptr) {}
     };
 
 void Meniu::executa(AgentieVacante& agentie) {
-    int tipUtilizator;
     std::string nume;
     Autobuz autobuz(20, nume, 120);
     AutentificareManager manager;
@@ -397,7 +396,7 @@ void Meniu::selecteazaTransport(int nrBilete, const std::string& tipVacanta) {
             char esteCopilChar;
             bool esteCopil;
 
-            std::cout << "Cate persoane sunt în grup? ";
+            std::cout << "Cate persoane sunt in grup? ";
             std::cin >> nrPersoane;
 
             std::cout << "Este pentru copil? (d/n): ";
@@ -432,7 +431,7 @@ void Meniu::selecteazaTransport(int nrBilete, const std::string& tipVacanta) {
             char esteCopilChar;
             bool esteCopil;
 
-            std::cout << "Cate persoane sunt în grup? ";
+            std::cout << "Cate persoane sunt in grup? ";
             std::cin >> nrPersoane;
 
             std::cout << "Este pentru copil? (d/n): ";

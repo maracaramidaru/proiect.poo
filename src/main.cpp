@@ -1,10 +1,10 @@
 
 #include <memory>
-#include "AgentieVacante.h"
-#include "Hotel.h"
-#include "Vila.h"
-#include "Enumerari.h"
-#include "Meniu.h"
+#include "../include/AgentieVacante.h"
+#include "../include/Hotel.h"
+#include "../include/Vila.h"
+#include "../include/Enumerari.h"
+#include "../include/Meniu.h"
 
 int main() {
     AgentieVacante agentie;
