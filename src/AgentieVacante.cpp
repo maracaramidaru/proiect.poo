@@ -91,7 +91,7 @@ void AgentieVacante::afiseazaPacheteDupaTip(const std::string& tip) const {
         std::cout << "Nu exista pachete pentru tipul selectat.\n";
 }
 
-void AgentieVacante::listeazaPachete() {
+void AgentieVacante::listeazaPachete(const AutentificareManager& manager) {
     if (pachete.empty()) {
         std::cout << "Nu exista pachete de vacanta disponibile.\n";
         return;
@@ -109,7 +109,7 @@ void AgentieVacante::listeazaPachete() {
 
         std::cout << *pachete[i];
     }
-    AutentificareManager manager;
+    //AutentificareManager manager;
     auto utilizatorCurent = manager.getUtilizatorCurent();
 
     if (utilizatorCurent && utilizatorCurent->getRol() == "organizator") {

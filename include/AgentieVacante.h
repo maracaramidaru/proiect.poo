@@ -23,7 +23,7 @@ private:
 public:
     GestiuneCazari& getGestiuneCazari();
 
-    void listeazaPachete();
+    void listeazaPachete(const AutentificareManager& manager);
     void afiseazaPacheteDupaTip(const std::string& tip) const;
     void cautaDupaOras(const std::string& orasCautat) const;
     void adaugaPachet(TipVacanta tipPachet, const std::string &destinatie, const std::string &dataIncepere, int durataZile, double pret, const std::string &oras, int bilete = 0);

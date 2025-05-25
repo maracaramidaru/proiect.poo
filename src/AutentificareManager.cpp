@@ -78,10 +78,8 @@ void AutentificareManager::login() {
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::cin >> *utilizatorNou;
 
-        // Seteaza username-ul corect la noul utilizator
         utilizatorNou->setUsername(userInput);
 
-        // Adauga utilizatorul in lista pentru a putea fi gasit ulterior
         utilizatori.push_back(utilizatorNou);
 
         utilizatorCurent = utilizatorNou;

@@ -304,7 +304,7 @@ void Meniu::executa(AgentieVacante& agentie) {
                     return;
                 }
                 switch (optiune) {
-                    case 1: agentie.listeazaPachete();
+                    case 1: agentie.listeazaPachete(manager);
                     break;
                     case 2: cautaPachete(agentie);
                     break;
@@ -334,7 +334,7 @@ void Meniu::executa(AgentieVacante& agentie) {
                 }
                 switch (optiune) {
                     case 1: adaugaPachet(agentie); break;
-                    case 2: agentie.listeazaPachete(); break;
+                    case 2: agentie.listeazaPachete(manager); break;
                     case 0: manager.logout();
                     break;
                     default: std::cout << "Optiune invalida.\n";
