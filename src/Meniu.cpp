@@ -189,9 +189,9 @@ if (cazariDisponibile.empty()) {
                     } else if (tipCazare == 2) {
                         std::cout << "\nVile disponibile:\n";
                         std::vector<std::shared_ptr<Vila>> vile;
-                        vile.push_back(std::make_shared<Vila>("Vila Panorama", vacantaSelectata->getDestinatie(), 300.0, 1, 8));
-                        vile.push_back(std::make_shared<Vila>("Vila Garden", vacantaSelectata->getDestinatie(), 250.0, 1, 6));
-                        vile.push_back(std::make_shared<Vila>("Vila Forest", vacantaSelectata->getDestinatie(), 200.0, 1, 4));
+                        vile.push_back(std::make_shared<Vila>("Vila Panorama",4, vacantaSelectata->getDestinatie(), 300.0, 1, 8));
+                        vile.push_back(std::make_shared<Vila>("Vila Garden",3, vacantaSelectata->getDestinatie(), 250.0, 1, 6));
+                        vile.push_back(std::make_shared<Vila>("Vila Forest",2, vacantaSelectata->getDestinatie(), 200.0, 1, 4));
 
                         for (size_t i = 0; i < vile.size(); ++i) {
                             std::cout << i + 1 << ". " << vile[i]->getNume() << " (Capacitate: "

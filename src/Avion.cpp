@@ -20,7 +20,6 @@ int Avion::getPozitie() const {
 }
 
 const std::string& Avion::getNume() const {
-    // exemplu: returnează numele cu prefix "Avion: "
     return  nume;
 }
 
@@ -63,7 +62,7 @@ void Avion::ruleazaJocAvioane() {
             if (exista) {
                 std::cout << "Nume deja utilizat! Te rog alege un alt nume.\n";
             } else {
-                avioane.emplace_back(25, nume, 100);
+                avioane.emplace_back(25, numeavion, 100);
                 numeValid = true;
             }
         }
@@ -100,6 +99,3 @@ void Avion::ruleazaJocAvioane() {
         std::cout << "\nNu ai ghicit castigatorul. Poate ai mai mult noroc data viitoare!\n";
     }
 }
-//
-// Created by marac on 5/22/2025.
-//

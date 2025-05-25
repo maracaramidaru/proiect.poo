@@ -13,16 +13,10 @@ void Hotel::setSpa(bool are) {
     areSpa = are;
 }
 
-// void Hotel::setRestaurant(bool are) {
-//     areRestaurant = are;
-// }
-
 double Hotel::calculeazaPret(int nrNopti, int nrPersoane) {
     double pretTotal = Cazare::calculeazaPret(nrNopti, nrPersoane);
     if (areSpa) pretTotal += 100 * nrNopti;
     if (arePiscina) pretTotal += 50 * nrNopti;
     return pretTotal;
 }
-//
-// Created by marac on 5/23/2025.
-//
+

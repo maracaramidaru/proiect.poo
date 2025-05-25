@@ -49,15 +49,6 @@ bool CityBreakMunte::rezervaBilet() {
         throw BileteEpuizateException();
     }
 }
-//
-// double CityBreakMunte::calculeazaPretCuReducere(double pretInitial, const std::string& codPromo) {
-//     if (codPromo == "REDUCERE20")
-//         return getPret() * 0.8;
-//     else if (codPromo == "REDUCERE25")
-//         return getPret() * 0.75;
-//     else
-//         return pretInitial;
-// }
 
 std::istream& operator>>(std::istream& in, CityBreakMunte& pachet) {
     std::cout << "Introdu destinatia: ";

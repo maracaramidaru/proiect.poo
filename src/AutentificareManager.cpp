@@ -14,7 +14,6 @@ void AutentificareManager::login() {
     std::cout << "Introdu username-ul: ";
     std::getline(std::cin, userInput);
 
-    // Cauta utilizatorul cu username-ul dat
     std::shared_ptr<Utilizator> gasit = nullptr;
     for (const auto& u : utilizatori) {
         if (u->getUsername() == userInput) {

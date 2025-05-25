@@ -1,13 +1,11 @@
 #include "Vila.h"
 #include <iostream>
 #include <string>
-Vila::Vila(const std::string& nume, const std::string& locatie,
+Vila::Vila(const std::string& nume, int stele, const std::string& locatie,
            double pretPerNoapte, int camereDisponibile, int capacitateMaxima)
-    : Cazare(nume, TipCazare::vila, 0, locatie, pretPerNoapte, camereDisponibile),
-      //areBucatarie(true), areGradina(true),
+    : Cazare(nume, TipCazare::vila, stele, locatie, pretPerNoapte, camereDisponibile),
       areBarbeque(false),
       capacitateMaxima(capacitateMaxima) {}
-
 void Vila::setBarbeque(bool are) {
     areBarbeque = are;
 }

@@ -49,7 +49,3 @@ void GestiuneCazari::afiseazaCazariPentruDestinatie(const std::string& destinati
         std::cout << "\n------------------\n";
     }
 }
-
-//
-// Created by marac on 5/23/2025.
-//

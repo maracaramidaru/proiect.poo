@@ -14,7 +14,7 @@ private:
     int capacitateMaxima;
 
 public:
-    Vila(const std::string& nume, const std::string& locatie,
+    Vila(const std::string& nume,int stele, const std::string& locatie,
          double pretPerNoapte, int camereDisponibile, int capacitateMaxima);
 
     void setBarbeque(bool are);

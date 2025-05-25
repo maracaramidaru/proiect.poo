@@ -23,7 +23,7 @@ int main() {
     hotelAlpi->adaugaFacilitate("Sala fitness");
     agentie.getGestiuneCazari().adaugaCazare("Innsbruck", hotelAlpi);
 
-    auto vilaVenetia = std::make_shared<Vila>("Villa Venezia", "Venetia", 1200.0, 5, 10);
+    auto vilaVenetia = std::make_shared<Vila>("Villa Venezia",3, "Venetia", 1200.0, 5, 10);
     vilaVenetia->setBarbeque(true);
     vilaVenetia->adaugaFacilitate("Gradina privata");
     vilaVenetia->adaugaFacilitate("Vedere la canal");
