@@ -9,6 +9,19 @@
 #include "Hotel.h"
 #include "Statistici.h"
 #include "Vila.h"
+#include <vector>
+#include "Cazare.h"
+#include "AgentieVacante.h"
+#include "Utilizator.h"
+#include "Vacanta.h"
+#include "Croaziera.h"
+#include "CityBreakMunte.h"
+#include "CityBreakPlaja.h"
+#include <memory>
+#include "AutentificareManager.h"
+#include <algorithm>
+#include "Enumerari.h"
+
 Meniu& Meniu::getInstance() {
     static Meniu instance;
     return instance;
@@ -194,20 +207,35 @@ if (cazariDisponibile.empty()) {
                             cazareSelectata = vile[alegereVila - 1];
                         }
                     }
-
                     if (cazareSelectata) {
                         std::cout << "\nOptiuni suplimentare:\n";
                         char optiune;
-                        std::cout << "Doriti mic dejun? (d/n): ";
-                        std::cin >> optiune;
+
+                        do {
+                            std::cout << "Doriti mic dejun? (d/n): ";
+                            std::cin >> optiune;
+                            if (optiune != 'd' && optiune != 'D' && optiune != 'n' && optiune != 'N') {
+                                std::cout << "Optiune invalida! Va rugam sa introduceti 'd' sau 'n'.\n";
+                            }
+                        } while (optiune != 'd' && optiune != 'D' && optiune != 'n' && optiune != 'N');
                         cazareSelectata->setMicDejun(optiune == 'd' || optiune == 'D');
 
-                        std::cout << "Doriti demipensiune? (d/n): ";
-                        std::cin >> optiune;
+                        do {
+                            std::cout << "Doriti demipensiune? (d/n): ";
+                            std::cin >> optiune;
+                            if (optiune != 'd' && optiune != 'D' && optiune != 'n' && optiune != 'N') {
+                                std::cout << "Optiune invalida! Va rugam sa introduceti 'd' sau 'n'.\n";
+                            }
+                        } while (optiune != 'd' && optiune != 'D' && optiune != 'n' && optiune != 'N');
                         cazareSelectata->setDemipensiune(optiune == 'd' || optiune == 'D');
 
-                        std::cout << "Doriti all inclusive? (d/n): ";
-                        std::cin >> optiune;
+                        do {
+                            std::cout << "Doriti all inclusive? (d/n): ";
+                            std::cin >> optiune;
+                            if (optiune != 'd' && optiune != 'D' && optiune != 'n' && optiune != 'N') {
+                                std::cout << "Optiune invalida! Va rugam sa introduceti 'd' sau 'n'.\n";
+                            }
+                        } while (optiune != 'd' && optiune != 'D' && optiune != 'n' && optiune != 'N');
                         cazareSelectata->setAllInclusive(optiune == 'd' || optiune == 'D');
 
                         double pretCazare = cazareSelectata->calculeazaPret(vacantaSelectata->getDurataZile(), nrBilete);

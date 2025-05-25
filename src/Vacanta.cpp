@@ -3,6 +3,7 @@
 #include <string>
 #include <numeric>
 #include "ValidatorData.h"
+#include "Cazare.h"
 
 Vacanta::Vacanta(std::string destinatie, std::string dataIncepere, int durataZile, double pret, std::string oras)
     : destinatie(destinatie),

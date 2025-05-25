@@ -1,5 +1,6 @@
 #include "Utilizator.h"
-
+#include "Transport.h"
+#include "Vacanta.h"
 Utilizator::Utilizator() {}
 
 Utilizator::Utilizator(const std::string& u, const std::string& p, const std::string& r)

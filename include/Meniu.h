@@ -9,6 +9,7 @@
 #include "Transport.h"
 #include "Vacanta.h"
 #include <string>
+
 class Meniu {
 public:
     static Meniu& getInstance();

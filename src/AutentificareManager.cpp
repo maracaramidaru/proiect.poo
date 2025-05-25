@@ -1,9 +1,10 @@
 #include "AutentificareManager.h"
-# include "Enumerari.h"
 #include <iostream>
 #include <string>
 #include "Vizitator.h"
 #include "Organizator.h"
+#include "Utilizator.h"
+#include <numeric>
 AutentificareManager::AutentificareManager() {
     utilizatori.push_back(std::make_shared<Vizitator>("mara", "parola123"));
 }

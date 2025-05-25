@@ -1,11 +1,19 @@
 #include "Transport.h"
+#include "TransportManager.h"
 #include <iostream>
 #include <algorithm>
 #include <string>
+#include <vector>
+#include <list>
 
-Transport::Transport(int nrLocuri) : locuri(nrLocuri, false), numarLocuri(nrLocuri) {}
+
+Transport::Transport(int nrLocuri) :  numarLocuri(nrLocuri) {
+    locuri.resize(nrLocuri, false);
+}
 Transport::Transport(int nrLocuri, const std::string& nume)
-    : numarLocuri(nrLocuri), nume(nume) {}
+    : numarLocuri(nrLocuri), nume(nume) {
+    locuri.resize(nrLocuri, false);
+}
 
 Transport::~Transport() {}
 
