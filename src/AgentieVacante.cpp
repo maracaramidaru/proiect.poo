@@ -4,6 +4,8 @@
 #include "CityBreakPlaja.h"
 #include "CityBreakMunte.h"
 #include "Croaziera.h"
+#include "Exceptii.h"
+
 
 GestiuneCazari& AgentieVacante::getGestiuneCazari() {
     return gestiuneCazari;
@@ -160,5 +162,6 @@ void AgentieVacante::listeazaPachete(const AutentificareManager& manager) {
                 pachete.push_back(pachetNou);
                 std::cout << "Pachetul a fost copiat si adaugat cu succes.\n";
             }
+        }
     }
 }
