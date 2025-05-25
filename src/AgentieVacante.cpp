@@ -140,16 +140,25 @@ void AgentieVacante::listeazaPachete(const AutentificareManager& manager) {
                 Croaziera copie = *croaziera;
                 pachetNou = std::make_shared<Croaziera>(copie);
             }
-
             if (pachetNou) {
                 std::string dataNoua;
-                std::cout << "Introdu noua data de incepere (format: DD-MM-YYYY): ";
-                std::cin >> dataNoua;
-                pachetNou->setDataIncepere(dataNoua);
+
+                while (true) {
+                    std::cout << "Introdu noua data de incepere (format: DD-MM-YYYY): ";
+                    std::cin >> dataNoua;
+
+                    try {
+                        pachetNou->setDataIncepere(dataNoua);
+                        break;  // dacă nu aruncă excepție => data e validă
+                    } catch (const DataInvalidaException& e) {
+                        std::cout << "Eroare: " << e.what() << "\n";
+                        std::cin.clear();
+                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                    }
+                }
 
                 pachete.push_back(pachetNou);
                 std::cout << "Pachetul a fost copiat si adaugat cu succes.\n";
             }
-        }
     }
 }

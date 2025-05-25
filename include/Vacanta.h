@@ -34,7 +34,7 @@ public:
 
     bool operator<(const Vacanta& other) const;
 
-    void setDataIncepere(std::string dataNoua);
+    void setDataIncepere(const std::string& dataNoua);
 
     Vacanta(const Vacanta& other);
     Vacanta& operator=(const Vacanta& other);

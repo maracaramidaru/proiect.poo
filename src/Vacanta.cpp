@@ -2,6 +2,8 @@
 #include <iostream>
 #include <string>
 #include <numeric>
+#include "ValidatorData.h"
+
 Vacanta::Vacanta(std::string destinatie, std::string dataIncepere, int durataZile, double pret, std::string oras)
     : destinatie(destinatie),
       dataIncepere(dataIncepere),
@@ -35,23 +37,11 @@ const std::string& Vacanta::getDestinatie() const {
 bool Vacanta::operator<(const Vacanta& other) const {
     return this->getPret() < other.getPret();
 }
-
-void Vacanta::setDataIncepere(std::string dataNoua) {
-    while (true) {
-        try {
-            ValidatorData::valideazaData(dataNoua);
-            dataIncepere = dataNoua;
-            return;
-        } catch (const DataInvalidaException& e) {
-            std::cout << "Eroare la setarea datei: " << e.what() << "\n";
-            std::cout << "Introdu din nou data (format: DD-MM-YYYY): ";
-            if (!(std::cin >> dataNoua)) {
-                std::cin.clear();
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            }
-        }
-    }
+void Vacanta::setDataIncepere(const std::string& dataNoua) {
+    ValidatorData::valideazaData(dataNoua);
+    dataIncepere = dataNoua;
 }
+
 
 Vacanta::Vacanta(const Vacanta& other)
     : destinatie(other.destinatie),

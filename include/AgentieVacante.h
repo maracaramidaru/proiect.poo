@@ -18,7 +18,6 @@ class AgentieVacante {
 private:
     std::vector<std::shared_ptr<Vacanta>> pachete;
     GestiuneCazari gestiuneCazari;
-    //int tip;
 
 public:
     GestiuneCazari& getGestiuneCazari();
