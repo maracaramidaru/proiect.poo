@@ -1,4 +1,81 @@
-#PROIECT AGENTIE DE VACANTE
+PROIECT- AGENTIE DE TURISM
+
+DESCRIEREA PROIECTULUI:
+      Proiectul reprezintă o aplicație C++ orientată pe obiecte (OOP) care simulează funcționalitatea unei agenții de vacanțe, adresată atât vizitatorilor interesați să rezerve pachete turistice, cât și organizatorilor care gestionează și adaugă oferte noi. Aplicația este structurată modular, folosind clase, ierarhii, polimorfism, funcții virtuale, STL, smart pointers, operatori suprascrişi, upcasting/downcasting și template-uri.
+      Aplicația este împărțită în două secțiuni mari, în funcție de tipul utilizatorului: Vizitator sau Organizator. În funcție de rolul ales la autentificare, utilizatorul va avea acces la un meniu personalizat.
+
+1. Meniul Vizitatorului
+Vizitatorii au acces la următoarele funcționalități:
+
+Listarea tuturor pachetelor de vacanță
+Afișează toate vacanțele disponibile în agenție, indiferent de categorie. Este util pentru a vedea rapid toate opțiunile existente.
+
+Căutarea pachetelor după anumite criterii
+Permite căutarea specifică, cum ar fi după destinație, preț, perioadă sau tipul vacanței.
+
+Afișarea doar a vacanțelor de tip City Break la Munte
+Filtrează vacanțele disponibile și le afișează doar pe cele care sunt la munte.
+
+Afișarea doar a vacanțelor de tip City Break la Plajă
+Similar cu opțiunea anterioară, dar se referă la vacanțele de tip plajă.
+
+Afișarea croazierelor disponibile
+Oferă vizitatorului o listă cu toate croazierele disponibile pentru rezervare.
+
+Rezervarea unei vacanțe
+Permite alegerea unui pachet și rezervarea unui bilet. Numărul de bilete este limitat, așa că rezervările se închid când toate locurile sunt ocupate.
+
+Vizualizarea biletelor achiziționate
+Afișează toate biletele pe care utilizatorul le-a rezervat, împreună cu detaliile acestora.
+
+Sortarea vacanțelor în funcție de preț
+Oferă o listă a vacanțelor disponibile ordonată crescător după preț, astfel încât utilizatorul să poată vedea cele mai accesibile oferte.
+
+Anularea rezervării unui loc de transport
+Utilizatorul poate renunța la un loc rezervat anterior (de exemplu, într-un avion sau autocar).
+
+Logout
+Utilizatorul este delogat și revine la meniul principal.
+
+Ieșirea din aplicație
+Închide aplicația și oprește complet execuția.
+
+2. Meniul Organizatorului
+Organizatorii sunt responsabili de gestionarea conținutului aplicației și au acces la următoarele opțiuni:
+
+Adăugarea unui nou pachet de vacanță
+Permite introducerea manuală a unei vacanțe noi: destinație, dată, preț, număr de bilete, tipul vacanței etc.
+
+Listarea tuturor vacanțelor
+Afișează toate vacanțele create până în acel moment, inclusiv cele fără bilete disponibile sau deja rezervate.
+
+Logout
+Deloghează organizatorul și revine la meniul principal.
+
+Ieșirea din aplicație
+Oprește complet aplicația.
+
+    Funcționalități speciale pentru vizitatori:
+Sistem de puncte: La fiecare bilet rezervat, vizitatorul primește 50 de puncte. La atingerea a 100 de puncte, primește automat un cadou surpriză.
+
+Selecție transport: După ce rezervă o vacanță, utilizatorul poate selecta mijlocul de transport dorit, alege locuri specifice și verifica disponibilitatea acestora.
+
+Cazare detaliată: După rezervarea unei vacanțe, utilizatorul poate alege cazarea și poate vedea detalii despre aceasta (ex. facilități, număr de stele).
+
+Anularea locurilor de transport: Dacă se răzgândește, utilizatorul poate elibera locurile rezervate pentru transport.
+
+Mini-joc "Cursa agențiilor de zbor": Un joc interactiv ce simulează o competiție între agențiile de zbor pentru a afla care oferă cel mai rapid avion.
+
+Statistici disponibile:
+Aplicația include o clasă dedicată statisticilor, care oferă:
+
+Numărul total de bilete vândute
+
+Cele mai populare destinații
+
+Cele mai rezervate tipuri de vacanță
+
+Numărul total de puncte acumulate de utilizatori
 
 ### Folosiți template-ul corespunzător grupei voastre!
 
