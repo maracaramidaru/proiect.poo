@@ -17,12 +17,4 @@ public:
     const char* what() const noexcept override;
 };
 
-class RezervareInvalidaException : public std::exception {
-private:
-    std::string mesaj;
-public:
-    explicit RezervareInvalidaException(const std::string& msg);
-    const char* what() const noexcept override;
-};
-
 #endif

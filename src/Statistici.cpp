@@ -19,7 +19,6 @@ void Statistici::afiseazaStatistici() const {
     std::cout << "Total rezervari: " << totalRezervari << "\n";
     std::cout << "Total vanzari: " << totalVanzari << " RON\n";
 
-    //afiseazaNrBileteVandute();
     std::cout << "\nRezervari per destinatie:\n";
 
     auto maxRezervari = std::max_element(
@@ -38,6 +37,3 @@ void Statistici::afiseazaStatistici() const {
         std::cout << "\n";
     }
 }
-//
-// Created by marac on 5/22/2025.
-//

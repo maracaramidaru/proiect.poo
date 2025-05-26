@@ -20,6 +20,3 @@ double Vila::calculeazaPret(int nrNopti, int nrPersoane) {
     }
     return Cazare::calculeazaPret(nrNopti, nrPersoane);
 }
-//
-// Created by marac on 5/23/2025.
-//

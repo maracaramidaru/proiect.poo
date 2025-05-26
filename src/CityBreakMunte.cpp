@@ -93,6 +93,3 @@ std::istream& operator>>(std::istream& in, CityBreakMunte& pachet) {
 
     return in;
 }
-//
-// Created by marac on 5/23/2025.
-//

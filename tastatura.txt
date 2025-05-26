@@ -2,6 +2,9 @@ maria
 1
 maria
 parola
+1
+2
+Venetia
 6
 2
 4000
@@ -28,4 +31,5 @@ n
 7
 9
 5
+8
 10

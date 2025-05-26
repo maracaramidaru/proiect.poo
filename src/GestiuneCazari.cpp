@@ -1,5 +1,7 @@
 #include "GestiuneCazari.h"
-
+#include <string>
+#include <iostream>
+#include <memory>
 void GestiuneCazari::adaugaCazare(const std::string& destinatie, const std::shared_ptr<Cazare>& cazare) {
     cazariPerDestinatie[destinatie].push_back(cazare);
 }

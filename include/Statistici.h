@@ -11,7 +11,6 @@ private:
     std::map<std::string, int> rezervariPerDestinatie;
     int totalRezervari;
     double totalVanzari;
-
     Statistici();
 
 public:
@@ -19,7 +18,6 @@ public:
 
     void adaugaRezervare(const std::string& destinatie, double pret);
     void afiseazaStatistici() const;
-    //void afiseazaNrBileteVandute() const;
     Statistici(const Statistici&) = delete;
     Statistici& operator=(const Statistici&) = delete;
 };

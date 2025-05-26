@@ -5,6 +5,7 @@
 #include "CityBreakMunte.h"
 #include "Croaziera.h"
 #include "Exceptii.h"
+#include "PachetFactory.h"
 
 
 GestiuneCazari& AgentieVacante::getGestiuneCazari() {
@@ -111,7 +112,7 @@ void AgentieVacante::listeazaPachete(const AutentificareManager& manager) {
 
         std::cout << *pachete[i];
     }
-    //AutentificareManager manager;
+
     auto utilizatorCurent = manager.getUtilizatorCurent();
 
     if (utilizatorCurent && utilizatorCurent->getRol() == "organizator") {
@@ -151,7 +152,7 @@ void AgentieVacante::listeazaPachete(const AutentificareManager& manager) {
 
                     try {
                         pachetNou->setDataIncepere(dataNoua);
-                        break;  // dacă nu aruncă excepție => data e validă
+                        break;
                     } catch (const DataInvalidaException& e) {
                         std::cout << "Eroare: " << e.what() << "\n";
                         std::cin.clear();

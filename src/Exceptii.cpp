@@ -9,9 +9,3 @@ DataInvalidaException::DataInvalidaException(const std::string& msg) : mesaj(msg
 const char* DataInvalidaException::what() const noexcept {
     return mesaj.c_str();
 }
-
-RezervareInvalidaException::RezervareInvalidaException(const std::string& msg) : mesaj(msg) {}
-
-const char* RezervareInvalidaException::what() const noexcept {
-    return mesaj.c_str();
-}

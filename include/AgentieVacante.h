@@ -1,7 +1,6 @@
 #ifndef AGENTIEVACANTE_H
 #define AGENTIEVACANTE_H
 
-#include <iostream>
 #include <vector>
 #include <memory>
 #include <algorithm>
