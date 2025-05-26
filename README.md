@@ -1,4 +1,4 @@
-# Nu primesc notă pentru că nu am pus titlu și descriere
+#PROIECT AGENTIE DE VACANTE
 
 ### Folosiți template-ul corespunzător grupei voastre!
 
