@@ -29,7 +29,7 @@ public:
 
     bool rezervaBilet() override;
 
-//    double calculeazaPretCuReducere(double pretInitial, const std::string& codPromo);
+
 
     friend std::istream& operator>>(std::istream& in, CityBreakMunte& pachet);
 };

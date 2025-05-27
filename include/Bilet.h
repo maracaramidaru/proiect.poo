@@ -8,7 +8,7 @@
 
 class Bilet : public Vacanta {
 private:
-    //static int nrAchizitii;
+
 
 public:
     Bilet(const std::string& destinatie,
@@ -19,7 +19,7 @@ public:
 
 
 
-    //static void afiseazaNrAchizitii();
+
 
     void print(std::ostream& os) const override;
 };

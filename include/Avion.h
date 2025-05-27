@@ -12,7 +12,6 @@
 #include "Vizitator.h"
 
 class Avion : public Transport {
-    //std::string nume;
     int pozitie = 0;
     double pretCursa;
 public:

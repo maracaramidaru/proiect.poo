@@ -4,12 +4,10 @@
 
 #include <string>
 #include <stdexcept>
-#include "Cazare.h"  // Include clasa de bază
+#include "Cazare.h"
 
 class Vila : public Cazare {
 private:
-    //bool areBucatarie;
-    //bool areGradina;
     bool areBarbeque;
     int capacitateMaxima;
 

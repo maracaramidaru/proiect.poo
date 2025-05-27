@@ -7,7 +7,7 @@
 #include <memory>
 #include <string>
 #include <vector>
-#include "Cazare.h" // presupunem că ai clasa Cazare definită undeva
+#include "Cazare.h"
 
 class GestiuneCazari {
 private:

@@ -7,7 +7,6 @@
 #include <iostream>
 
 class Vapor : public Transport {
-    //std::string nume;
     int capacitate;
     double pretCursa;
 public:

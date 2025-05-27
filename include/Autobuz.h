@@ -6,7 +6,6 @@
 #include "Transport.h"
 
 class Autobuz : public Transport {
-     //std::string nume;
     double pretCursa;
 
 public:
